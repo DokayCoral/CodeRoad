@@ -1,0 +1,25 @@
+[project]
+name = "code-clone"
+version = "1.0.0"
+description = "Claude Code core functionality clone platform"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "contract: contract tests for tool interfaces",
+    "integration: integration tests for user journeys",
+    "unit: unit tests for internal logic",
+]
+pythonpath = ["src"]
